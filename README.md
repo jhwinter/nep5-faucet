@@ -1,5 +1,6 @@
 # nep5-faucet
-A faucet for NEP5 tokens on the NEO testnet.
+A faucet for NEP-5 tokens on the NEO testnet.
+This project was forked from https://github.com/CityOfZion/neo-faucet
 
 ## Docker Installation
 0. Open a terminal
@@ -9,7 +10,7 @@ A faucet for NEP5 tokens on the NEO testnet.
     * If it doesn't start running, it may be because docker sometimes likes to quit before allowing np-setup.exp 
     to finish bootstrapping the blockchain. I've tried everything that I can think of to make Docker stop doing this,
     but it still does it occasionally and I don't know why. If you have a solution that allows this to consistently 
-    build and run, contributions are welcome. 
+    build and run, contributions are welcome.
 4. Open a browser and go to http://localhost:8080 to visit the faucet web app
 
 ## If not using Docker, follow these Installation steps
@@ -22,12 +23,12 @@ A faucet for NEP5 tokens on the NEO testnet.
 6. get a wallet on the NEO testnet with NEP-5 tokens in it 
 7. Complete necessary configurations
     * if using venv, you may need to change a file path in faucet.py from `./src/neo-python` to `./venv/src/neo-python`
-    * move .aws/ to ~/.aws
+    * move .aws/* to ~/.aws/
     * modify nep5-token.json and environment.json 
 8. start the faucet `python3 faucet.py`
 9. Open a browser and go to http://localhost:8080 to visit the faucet web app
 
 
-### Built using Docker Community Edition, python 3.6.6, neo-python 0.7.6, pynamodb 3.3.0
+### Built using Docker Community Edition, Python 3.6.6, neo-python 0.7.6, and AWS Dynamodb
 Engine: 18.03.1-ce <br/>
 Compose: 1.21.1 (docker-compose file format v3.6)
