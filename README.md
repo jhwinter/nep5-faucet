@@ -5,7 +5,7 @@ This project was forked from https://github.com/CityOfZion/neo-faucet
 ## Docker Installation
 0. Open a terminal
 1. `cd nep5-faucet`
-2. Complete necessary configurations in .aws/ and config/
+2. Complete necessary configurations in app/config/
 3. `docker-compose up`
     * If it doesn't start running, it may be because docker sometimes likes to quit before allowing np-setup.exp 
     to finish bootstrapping the blockchain. I've tried everything that I can think of to make Docker stop doing this,
@@ -23,8 +23,8 @@ This project was forked from https://github.com/CityOfZion/neo-faucet
 6. get a wallet on the NEO testnet with NEP-5 tokens in it 
 7. Complete necessary configurations
     * if using venv, you may need to change a file path in faucet.py from `./src/neo-python` to `./venv/src/neo-python`
-    * move .aws/* to ~/.aws/
-    * modify nep5-token.json and environment.json 
+    * move config/.aws/* to ~/.aws/
+    * modify config/nep5-token.json and config/environment.json 
 8. start the faucet `python3 faucet.py`
 9. Open a browser and go to http://localhost:8080 to visit the faucet web app
 
