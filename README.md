@@ -28,6 +28,6 @@ A faucet for NEP5 tokens on the NEO testnet.
 9. Open a browser and go to http://localhost:8080 to visit the faucet web app
 
 
-### Built using Docker Community Edition, python3.6, and neo-python 0.6.9
+### Built using Docker Community Edition, python 3.6.6, neo-python 0.7.6, pynamodb 3.3.0
 Engine: 18.03.1-ce <br/>
 Compose: 1.21.1 (docker-compose file format v3.6)
