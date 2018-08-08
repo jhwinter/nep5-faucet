@@ -1,0 +1,7 @@
+{
+  "FAUCET_WALLET_PATH": "your/wallet/path",
+  "FAUCET_WALLET_ADDRESS": "yourwalletaddress",
+  "FAUCET_WALLET_PASSWORD": "yourwalletpassword",
+  "FAUCET_HOST": "0.0.0.0",
+  "FAUCET_PORT": "8080"
+}

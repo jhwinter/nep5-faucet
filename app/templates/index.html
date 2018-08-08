@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<title>{{ token_name }} Faucet</title>
+</head>
+<body class="bg-dark text-white">
+	<div class="container-fluid">
+		<div class="row">
+			<h1>{{ token_name }} Faucet</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<h6 class="text-info">Current block height: {{ height }}</h6>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			{% if wallet_height < height %}
+				<div class="alert alert-warning">Syncing... Please <a href="/">Refresh</a></div>
+			{% else %}
+				<div class="alert alert-success">Ready for Refill</div>
+			{% endif %}
+		</div>
+		{% block stuff %}
+		<h3>Free {{ token_symbol }} Tokens</h3>
+		<p class="text-info">Please fill out the form below to request tokens for your test development purposes on the NEO testnet.</p>
+		{% if error %}
+		<div class="alert alert-danger">
+			<p>{{ message }}</p>
+		</div>
+		{% endif %}
+		<form action="/ask" method="post">
+			<div class="form-group">
+				<label for="address_to">NEO Testnet Address</label>
+				<input type="text" class="form-control" id="address_to" name="address_to" placeholder="{{ faucet_wallet }}" {% if address %} value="{{ address }}" {% endif %} {% if come_back %} disabled {% endif %} required autofocus>
+			</div>
+			<hr/>
+			<button type="submit" class="btn btn-primary" {% if come_back %} disabled {% endif %}>Submit</button>
+		</form>
+		{% endblock %}
+		{% include 'user_guide.html' %}
+	</div>
+</body>
+</html>

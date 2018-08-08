@@ -1,0 +1,67 @@
+<hr/>
+<h3>After you submit your request, please add the {{ token_symbol }} script hash to your wallet:</h3>
+<h4>Using Aphelion Wallet:</h4>
+<ol>
+	<li>
+		Open Aphelion Wallet.
+	</li>
+	<li>
+		If not already on Testnet, navigate to "Settings". Under "NETWORK" in the "Preferences" section, make sure that
+		it says "TestNet". If not, select TestNet.
+	</li>
+	<li>
+		Navigate to "Assets".
+	</li>
+	<li>
+		Click on the "+" symbol with the "Add token" label. Copy `{{ token_script_hash }}` and paste
+		into the prompt. Then select "Add". This will add the {{ token_symbol }} token to your Aphelion Wallet on the NEO Testnet.
+	</li>
+</ol>
+<h4>Using Neon wallet:</h4>
+<ol>
+	<li>
+		Open Neon Wallet.
+	</li>
+	<li>
+		Navigate to "Manage Neon settings".
+	</li>
+	<li>
+		Select "Manage Tokens".
+	</li>
+	<li>
+		Select "TestNet" in the dropdown menu under "Network: Running on ". Select "+ Add a new token". Then, paste
+		`{{ token_script_hash }}` into the empty space with the "script hash" placeholder. Then, select
+		"Save".
+	</li>
+	<li>
+		Login to your wallet.
+	</li>
+	<li>
+		Your {{ token_symbol }} token balance should appear under the "Token" and "Balance" table.
+	</li>
+</ol>
+<h4>Using neo-python:</h4>
+<ol>
+	<li>
+		Type `np-prompt` into a terminal. This will open the Neo-python prompt.
+	</li>
+	<li>
+		Type `open wallet {/path/to/your/wallet}` and enter your password when prompted.
+		This will open the specified wallet.
+	</li>
+	<li>
+		Type `import token {{ token_script_hash }}`.
+		This allows the {{ token_symbol }} token to be viewed inside your wallet.
+	</li>
+	<li>
+		Type `wallet`. This will show you details about the contents of your wallet.
+		You should see "{{ token_name }}" appear in the "tokens" section of your wallet.
+		You should also see `"[{{ token_symbol }}]: 10000 "` under the "synced_balances" section.
+	</li>
+</ol>
+<hr/>
+<p>
+	If you run into any issues after following the above steps,
+	please take screenshots and copy/paste all error messages you got and
+	report them to either "hal0x2328" or "thiskoreanguy7" on the "Master Contract Token" discord.
+</p>
