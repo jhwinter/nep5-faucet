@@ -39,25 +39,27 @@ memory-profiler==0.52.0
 mmh3==2.5.1
 mock==2.0.0
 mpmath==1.0.0
-neo-boa==0.4.8
--e git+https://github.com/CityOfZion/neo-python.git@v0.7.6#egg=neo_python
+neo-boa==0.5.0
+-e git+https://github.com/CityOfZion/neo-python.git@v0.7.8#egg=neo_python
 neo-python-rpc==0.2.1
-neocore==0.4.11
+neocore==0.5.2
 pbr==4.1.1
-peewee==2.10.2
+peewee==3.6.4
+pexpect==4.6.0
 pluggy==0.6.0
 plyvel==1.0.5
 prompt-toolkit==2.0.3
 psutil==5.4.6
+ptyprocess==0.6.0
 py==1.5.4
 pycodestyle==2.4.0
 pycparser==2.18
-pycryptodome==3.6.3
+pycryptodome==3.6.6
 Pygments==2.2.0
 PyHamcrest==1.9.0
 pymitter==0.2.3
 Pympler==0.5
-pynamodb==3.3.0
+pynamodb==3.3.1
 pyparsing==2.2.0
 python-dateutil==2.7.3
 pytz==2018.5
